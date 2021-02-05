@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Body = styled.div`
   display: flex;
-  margin: 20px;
+  margin: 10px;
+  min-width: 25vh;
+  min-height: 15vh;
 `;
 
 export const CardContainer = styled.div`
@@ -13,6 +15,15 @@ export const CardContainer = styled.div`
   border-radius: 5px;
   border-style: solid;
   min-width: 25vw;
-  min-height: 25vh;
+  min-height: 15vh;
   overflow: hidden;
+`;
+
+export const Heading = styled.p`
+  font-family: Helvetica Neue;
+  font-size: 24px;
+  line-height: 32px;
+  color: #2a2941;
+  margin: 10px;
+  text-align: left;
 `;
