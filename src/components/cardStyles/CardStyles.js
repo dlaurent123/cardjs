@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const Body = styled.div``;
+export const Body = styled.div`
+  display: flex;
+  margin: 20px;
+`;
 
 export const CardContainer = styled.div`
   display: flex;
