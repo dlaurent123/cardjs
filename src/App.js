@@ -4,6 +4,7 @@ function App() {
   return (
     <div className="App">
       <Card>
+        <Card.Image />
         <Card.Body>
           <Card.Heading
             className="truncate"

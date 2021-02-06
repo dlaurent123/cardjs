@@ -5,7 +5,10 @@ import {
   Body,
   Heading,
   SubHeading,
+  CardMedia,
+  CardMediaContainer,
 } from "./cardStyles/CardStyles";
+import previewImg from "../assets/image.svg";
 
 const Card = ({ children, classes, ...rest }) => {
   return (
@@ -38,6 +41,14 @@ Card.SubHeading = ({ text, classes, ...rest }) => {
     <SubHeading className={classNames("card-sub-heading", classes)} {...rest}>
       {text}
     </SubHeading>
+  );
+};
+
+Card.Image = ({ alt, classes, src = previewImg, ...rest }) => {
+  return (
+    <CardMediaContainer className={classNames("card-img", classes)}>
+      <CardMedia alt={alt} src={src} {...rest} />
+    </CardMediaContainer>
   );
 };
 

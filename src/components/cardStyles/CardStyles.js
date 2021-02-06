@@ -39,3 +39,14 @@ export const SubHeading = styled.h5`
   font-size: 14px;
   line-height: 22px;
 `;
+
+export const CardMediaContainer = styled.div`
+  width: 25vw;
+  height: 25vh;
+`;
+
+export const CardMedia = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+`;
