@@ -1,6 +1,11 @@
 import React from "react";
 import classNames from "classnames";
-import { CardContainer, Body, Heading } from "./cardStyles/CardStyles";
+import {
+  CardContainer,
+  Body,
+  Heading,
+  SubHeading,
+} from "./cardStyles/CardStyles";
 
 const Card = ({ children, classes, ...rest }) => {
   return (
@@ -20,11 +25,19 @@ Card.Body = ({ children, classes, ...rest }) => {
 
 Card.Heading = ({ classes, text, ...rest }) => {
   return (
-    <div style={{ width: "15vw" }}>
+    <div style={{ width: "18vw" }}>
       <Heading className={classNames("card-heading", classes)} {...rest}>
         {text}
       </Heading>
     </div>
+  );
+};
+
+Card.SubHeading = ({ text, classes, ...rest }) => {
+  return (
+    <SubHeading className={classNames("card-sub-heading", classes)} {...rest}>
+      {text}
+    </SubHeading>
   );
 };
 
