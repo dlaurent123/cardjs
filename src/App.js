@@ -1,10 +1,12 @@
 import "./App.css";
 import { Card } from "./components/Card";
+import video from "./assets/image.svg";
+
 function App() {
   return (
     <div className="App">
       <Card>
-        <Card.Image />
+        <Card.Media controls src={video} />
         <Card.Body>
           <Card.Heading
             className="truncate"

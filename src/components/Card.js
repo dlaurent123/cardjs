@@ -5,8 +5,9 @@ import {
   Body,
   Heading,
   SubHeading,
-  CardMedia,
+  CardImage,
   CardMediaContainer,
+  CardVideo,
 } from "./cardStyles/CardStyles";
 import previewImg from "../assets/image.svg";
 
@@ -44,10 +45,14 @@ Card.SubHeading = ({ text, classes, ...rest }) => {
   );
 };
 
-Card.Image = ({ alt, classes, src = previewImg, ...rest }) => {
+Card.Media = ({ alt, classes, isVideo = false, src = previewImg, ...rest }) => {
   return (
-    <CardMediaContainer className={classNames("card-img", classes)}>
-      <CardMedia alt={alt} src={src} {...rest} />
+    <CardMediaContainer className={classNames("card-media", classes)}>
+      {isVideo ? (
+        <CardVideo alt={alt} src={src} {...rest} />
+      ) : (
+        <CardImage alt={alt} src={src} {...rest} />
+      )}
     </CardMediaContainer>
   );
 };

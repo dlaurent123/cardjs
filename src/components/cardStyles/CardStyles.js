@@ -45,7 +45,13 @@ export const CardMediaContainer = styled.div`
   height: 25vh;
 `;
 
-export const CardMedia = styled.img`
+export const CardImage = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+`;
+
+export const CardVideo = styled.video`
   height: 100%;
   width: 100%;
   object-fit: cover;
