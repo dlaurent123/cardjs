@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 import {
   CardContainer,
@@ -9,10 +9,13 @@ import {
   CardMediaContainer,
   CardVideo,
   CardText,
+  CardFooter,
+  CardFavoriteButton,
 } from "./cardStyles/CardStyles";
 import previewImg from "../assets/image.svg";
 
 const Card = ({ children, classes, ...rest }) => {
+  const [isActive, setIsActive] = useState(false);
   return (
     <CardContainer className={classNames("card-container", classes)} {...rest}>
       {children}
@@ -63,6 +66,37 @@ Card.Text = ({ classes, text, ...rest }) => {
     <CardText className={classNames("card-text", classes)} {...rest}>
       {text}
     </CardText>
+  );
+};
+
+Card.Footer = ({ children, classes, ...rest }) => {
+  return (
+    <CardFooter className={classNames("card-footer", classes)} {...rest}>
+      {children}
+    </CardFooter>
+  );
+};
+
+Card.FavouriteButton = ({
+  alt = "",
+  isActive,
+  setIsActive,
+  handleClick,
+  classes,
+  src,
+  ...rest
+}) => {
+  return (
+    <div style={{ height: "20px", display: "flex" }}>
+      <CardFavoriteButton
+        onClick={() => console.log(isActive)}
+        alt={alt}
+        className={classNames("favourite-button", classes)}
+        src={src}
+        {...rest}
+        handleClick={(isActive) => handleClick(isActive)}
+      />
+    </div>
   );
 };
 

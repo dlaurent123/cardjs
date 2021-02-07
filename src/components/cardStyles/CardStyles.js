@@ -37,10 +37,11 @@ export const SubHeading = styled.h5`
   text-align: left;
   font-size: 14px;
   line-height: 22px;
+  margin-bottom: 2vh;
 `;
 
 export const CardMediaContainer = styled.div`
-  width: 25vw;
+  width: inherit;
   height: 25vh;
 `;
 
@@ -63,10 +64,17 @@ export const CardText = styled.p`
   text-align: left;
   font-size: 14px;
   line-height: 22px;
+  max-width: fit-content;
+  margin-bottom: 2vh;
 `;
 
 export const CardFooter = styled.div`
   display: flex;
   min-height: 10vh;
-  min-width: 25vw;
+  min-width: 22vw;
+  align-items: flex-end;
+`;
+
+export const CardFavoriteButton = styled.img`
+  display: flex;
 `;
