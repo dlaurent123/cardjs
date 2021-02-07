@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Body = styled.div`
   display: flex;
-  /* margin: 20px; */
   min-width: 25vh;
   min-height: 15vh;
   flex-direction: column;
@@ -55,4 +54,19 @@ export const CardVideo = styled.video`
   height: 100%;
   width: 100%;
   object-fit: cover;
+`;
+
+export const CardText = styled.p`
+  display: flex;
+  font-family: Helvetica Neue;
+  color: #2a2941;
+  text-align: left;
+  font-size: 14px;
+  line-height: 22px;
+`;
+
+export const CardFooter = styled.div`
+  display: flex;
+  min-height: 10vh;
+  min-width: 25vw;
 `;

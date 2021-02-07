@@ -8,6 +8,7 @@ import {
   CardImage,
   CardMediaContainer,
   CardVideo,
+  CardText,
 } from "./cardStyles/CardStyles";
 import previewImg from "../assets/image.svg";
 
@@ -54,6 +55,14 @@ Card.Media = ({ alt, classes, isVideo = false, src = previewImg, ...rest }) => {
         <CardImage alt={alt} src={src} {...rest} />
       )}
     </CardMediaContainer>
+  );
+};
+
+Card.Text = ({ classes, text, ...rest }) => {
+  return (
+    <CardText className={classNames("card-text", classes)} {...rest}>
+      {text}
+    </CardText>
   );
 };
 
