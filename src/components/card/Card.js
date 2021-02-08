@@ -14,6 +14,7 @@ import {
   MenueButton,
   MenueImgContainer,
   MenuItemsContainer,
+  MenueContainer,
 } from "./cardStyles/CardStyles";
 import previewImg from "../../assets/image.svg";
 import star1 from "../../assets/Star.svg";
@@ -109,24 +110,26 @@ Card.Menue = ({
   ...rest
 }) => {
   return (
-    <div>
-      <MenueButton
-        style={{
-          backgroundColor: isOpen && "#1254FF",
-          borderWidth: isOpen && "2px",
-          borderColor: isOpen && "#AACBFF",
-        }}
-        className={classNames("menue-button", classes)}
-        {...rest}
-      >
-        <MenueImgContainer>
-          <img alt="menue-button" src={isOpen ? menueSvg2 : menueSvg} />
-        </MenueImgContainer>
-      </MenueButton>
-      <MenuItemsContainer style={{ display: !isOpen && "none" }}>
-        <MenueItemsList items={menueItems} onClick={menueItemClick} />
-      </MenuItemsContainer>
-    </div>
+    <>
+      <MenueContainer>
+        <MenueButton
+          style={{
+            backgroundColor: isOpen && "#1254FF",
+            borderWidth: isOpen && "2px",
+            borderColor: isOpen && "#AACBFF",
+          }}
+          className={classNames("menue-button", classes)}
+          {...rest}
+        >
+          <MenueImgContainer>
+            <img alt="menue-button" src={isOpen ? menueSvg2 : menueSvg} />
+          </MenueImgContainer>
+        </MenueButton>
+        <MenuItemsContainer style={{ display: !isOpen && "none" }}>
+          <MenueItemsList items={menueItems} onClick={menueItemClick} />
+        </MenuItemsContainer>
+      </MenueContainer>
+    </>
   );
 };
 

@@ -23,10 +23,10 @@ function App() {
             }
           />
           <Card.Footer>
-            <Card.FavoriteButton
+            {/* <Card.FavoriteButton
               onClick={() => setIsActive(!isActive)}
               isActive={isActive}
-            />
+            /> */}
             <Card.Menue
               isOpen={isOpen}
               onClick={() => setIsOpen(!isOpen)}

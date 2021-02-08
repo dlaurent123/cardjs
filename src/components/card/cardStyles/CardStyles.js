@@ -17,7 +17,7 @@ export const CardContainer = styled.div`
   border-style: solid;
   min-width: 25vw;
   min-height: 15vh;
-  overflow: hidden;
+
   justify-content: center;
   width: 25vw;
 `;
@@ -115,6 +115,7 @@ export const MenuItemsContainer = styled.div`
   width: 10vw;
   border-style: solid;
   margin-top: 5px;
+  bottom: -105px;
 `;
 
 export const MenueItem = styled.p`
@@ -145,4 +146,11 @@ export const MenueItemContainer = styled.div`
   :hover ${MenueItem} {
     color: white;
   }
+`;
+
+export const MenueContainer = styled.div`
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  position: relative;
 `;
