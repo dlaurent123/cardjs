@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="405px" viewBox="0 0 86 405" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menue" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M43,319 C66.748244,319 86,338.251756 86,362 C86,385.748244 66.748244,405 43,405 C19.251756,405 0,385.748244 0,362 C0,338.251756 19.251756,319 43,319 Z M43,159 C66.748244,159 86,178.251756 86,202 C86,225.748244 66.748244,245 43,245 C19.251756,245 0,225.748244 0,202 C0,178.251756 19.251756,159 43,159 Z M43.5,0 C66.972102,0 86,19.0278981 86,42.5 C86,65.972102 66.972102,85 43.5,85 C20.027898,85 1,65.972102 1,42.5 C1,19.0278981 20.027898,0 43.5,0 Z" id="Icon"></path>
+        </g>
+    </g>
+</svg>

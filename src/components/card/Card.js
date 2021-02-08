@@ -11,11 +11,16 @@ import {
   CardText,
   CardFooter,
   CardFavoriteButton,
+  MenueButton,
+  MenueImgContainer,
+  MenuItemsContainer,
 } from "./cardStyles/CardStyles";
 import previewImg from "../../assets/image.svg";
-
 import star1 from "../../assets/Star.svg";
 import star2 from "../../assets/Star-filled.svg";
+import menueSvg from "../../assets/menue.svg";
+import menueSvg2 from "../../assets/white-menue.svg";
+import MenueItemsList from "./menuItemsList/MenueItemsList";
 
 const Card = ({ children, classes, ...rest }) => {
   return (
@@ -51,7 +56,13 @@ Card.SubHeading = ({ text, classes, ...rest }) => {
   );
 };
 
-Card.Media = ({ alt, classes, isVideo = false, src = previewImg, ...rest }) => {
+Card.Media = ({
+  alt = "media-content",
+  classes,
+  isVideo = false,
+  src = previewImg,
+  ...rest
+}) => {
   return (
     <CardMediaContainer className={classNames("card-media", classes)}>
       {isVideo ? (
@@ -85,8 +96,37 @@ Card.FavoriteButton = ({ classes, isActive, src, ...rest }) => {
       className={classNames("favorite-button", classes)}
       {...rest}
     >
-      <img alt={"favorite-button"} src={isActive ? star2 : star1} />
+      <img alt="favorite-button" src={isActive ? star2 : star1} />
     </CardFavoriteButton>
+  );
+};
+
+Card.Menue = ({
+  classes,
+  isOpen = false,
+  menueItems,
+  menueItemClick,
+  ...rest
+}) => {
+  return (
+    <div>
+      <MenueButton
+        style={{
+          backgroundColor: isOpen && "#1254FF",
+          borderWidth: isOpen && "2px",
+          borderColor: isOpen && "#AACBFF",
+        }}
+        className={classNames("menue-button", classes)}
+        {...rest}
+      >
+        <MenueImgContainer>
+          <img alt="menue-button" src={isOpen ? menueSvg2 : menueSvg} />
+        </MenueImgContainer>
+      </MenueButton>
+      <MenuItemsContainer style={{ display: !isOpen && "none" }}>
+        <MenueItemsList items={menueItems} onClick={menueItemClick} />
+      </MenuItemsContainer>
+    </div>
   );
 };
 

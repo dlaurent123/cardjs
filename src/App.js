@@ -5,6 +5,7 @@ import video from "./assets/image.svg";
 
 function App() {
   const [isActive, setIsActive] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="App">
@@ -25,6 +26,12 @@ function App() {
             <Card.FavoriteButton
               onClick={() => setIsActive(!isActive)}
               isActive={isActive}
+            />
+            <Card.Menue
+              isOpen={isOpen}
+              onClick={() => setIsOpen(!isOpen)}
+              menueItems={["Save", "Edit", "Preview"]}
+              menueItemClick={() => console.log("hello")}
             />
           </Card.Footer>
         </Card.Body>

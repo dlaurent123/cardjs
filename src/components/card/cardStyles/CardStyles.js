@@ -19,9 +19,10 @@ export const CardContainer = styled.div`
   min-height: 15vh;
   overflow: hidden;
   justify-content: center;
+  width: 25vw;
 `;
 
-export const Heading = styled.p`
+export const Heading = styled.h1`
   font-family: Helvetica Neue;
   font-size: 24px;
   line-height: 32px;
@@ -30,7 +31,7 @@ export const Heading = styled.p`
   text-align: left;
 `;
 
-export const SubHeading = styled.h5`
+export const SubHeading = styled.h2`
   display: flex;
   font-family: Helvetica Neue;
   color: #2a2941;
@@ -70,12 +71,78 @@ export const CardText = styled.p`
 
 export const CardFooter = styled.div`
   display: flex;
-  min-height: 10vh;
-  min-width: 22vw;
-  align-items: flex-end;
+  /* min-height: 10vh;
+  min-width: 22vw; */
+  width: inherit;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
 `;
 
 export const CardFavoriteButton = styled.div`
   display: flex;
   height: 20px;
+  width: 20px;
+`;
+
+export const MenueButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-color: #d2d7df;
+  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 2.5vw;
+`;
+
+export const MenueImgContainer = styled.div`
+  height: 2vh;
+  display: flex;
+  justify-content: center;
+  width: inherit;
+`;
+
+export const MenuItemsContainer = styled.div`
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  border-color: #d2d7df;
+  border-width: 1px;
+  border-radius: 2px;
+  width: 10vw;
+  border-style: solid;
+  margin-top: 5px;
+`;
+
+export const MenueItem = styled.p`
+  font-family: Helvetica Neue;
+  line-height: 24px;
+  font-size: 16px;
+  font-size: 16px;
+  color: #2a2941;
+  font-weight: 400;
+`;
+
+export const MenueItemContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-color: #d2d7df;
+  border-bottom-width: 1px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  cursor: pointer;
+  :hover {
+    background-color: #1254ff;
+  }
+
+  :hover ${MenueItem} {
+    color: white;
+  }
 `;
