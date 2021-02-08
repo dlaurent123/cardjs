@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import classNames from "classnames";
 import {
   CardContainer,
@@ -12,10 +12,12 @@ import {
   CardFooter,
   CardFavoriteButton,
 } from "./cardStyles/CardStyles";
-import previewImg from "../assets/image.svg";
+import previewImg from "../../assets/image.svg";
+
+import star1 from "../../assets/Star.svg";
+import star2 from "../../assets/Star-filled.svg";
 
 const Card = ({ children, classes, ...rest }) => {
-  const [isActive, setIsActive] = useState(false);
   return (
     <CardContainer className={classNames("card-container", classes)} {...rest}>
       {children}
@@ -77,26 +79,14 @@ Card.Footer = ({ children, classes, ...rest }) => {
   );
 };
 
-Card.FavouriteButton = ({
-  alt = "",
-  isActive,
-  setIsActive,
-  handleClick,
-  classes,
-  src,
-  ...rest
-}) => {
+Card.FavoriteButton = ({ classes, isActive, src, ...rest }) => {
   return (
-    <div style={{ height: "20px", display: "flex" }}>
-      <CardFavoriteButton
-        onClick={() => console.log(isActive)}
-        alt={alt}
-        className={classNames("favourite-button", classes)}
-        src={src}
-        {...rest}
-        handleClick={(isActive) => handleClick(isActive)}
-      />
-    </div>
+    <CardFavoriteButton
+      className={classNames("favorite-button", classes)}
+      {...rest}
+    >
+      <img alt={"favorite-button"} src={isActive ? star2 : star1} />
+    </CardFavoriteButton>
   );
 };
 

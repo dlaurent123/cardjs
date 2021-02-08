@@ -75,6 +75,7 @@ export const CardFooter = styled.div`
   align-items: flex-end;
 `;
 
-export const CardFavoriteButton = styled.img`
+export const CardFavoriteButton = styled.div`
   display: flex;
+  height: 20px;
 `;

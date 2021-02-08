@@ -1,11 +1,11 @@
 import "./App.css";
-import { Card } from "./components/Card";
+import React, { useState } from "react";
+import { Card } from "./components/card/Card";
 import video from "./assets/image.svg";
-import favouriteSvg from "./assets/Star.svg";
-import { useState } from "react";
 
 function App() {
-  const [test, setTest] = useState(null);
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <div className="App">
       <Card>
@@ -22,9 +22,9 @@ function App() {
             }
           />
           <Card.Footer>
-            <Card.FavouriteButton
-              handleClick={({ isActive }) => console.log(isActive)}
-              src={favouriteSvg}
+            <Card.FavoriteButton
+              onClick={() => setIsActive(!isActive)}
+              isActive={isActive}
             />
           </Card.Footer>
         </Card.Body>
