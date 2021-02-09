@@ -30,8 +30,8 @@ function App() {
             <Card.Menue
               isOpen={isOpen}
               onClick={() => setIsOpen(!isOpen)}
-              menueItems={["Save", "Edit", "Preview"]}
-              menueItemClick={() => console.log("hello")}
+              menueActions={["Save", "Edit", "Preview"]}
+              menueActionClick={() => console.log("hello")}
             />
           </Card.Footer>
         </Card.Body>

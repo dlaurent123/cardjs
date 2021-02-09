@@ -108,7 +108,7 @@ export const MenueImgContainer = styled.div`
   width: inherit;
 `;
 
-export const MenuItemsContainer = styled.div`
+export const MenuActionsContainer = styled.div`
   position: absolute;
   background-color: white;
   z-index: 1;
@@ -121,7 +121,7 @@ export const MenuItemsContainer = styled.div`
   bottom: -105px;
 `;
 
-export const MenueItem = styled.p`
+export const MenueAction = styled.p`
   font-family: Helvetica Neue;
   line-height: 24px;
   font-size: 16px;
@@ -130,7 +130,7 @@ export const MenueItem = styled.p`
   font-weight: 400;
 `;
 
-export const MenueItemContainer = styled.div`
+export const MenueActionContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -146,7 +146,7 @@ export const MenueItemContainer = styled.div`
     background-color: #1254ff;
   }
 
-  :hover ${MenueItem} {
+  :hover ${MenueAction} {
     color: white;
   }
 `;

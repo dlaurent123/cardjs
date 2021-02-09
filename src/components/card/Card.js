@@ -13,7 +13,7 @@ import {
   CardFavoriteButton,
   MenueButton,
   MenueImgContainer,
-  MenuItemsContainer,
+  MenuActionsContainer,
   MenueContainer,
 } from "./cardStyles/CardStyles";
 import previewImg from "../../assets/image.svg";
@@ -21,7 +21,11 @@ import star1 from "../../assets/Star.svg";
 import star2 from "../../assets/Star-filled.svg";
 import menueSvg from "../../assets/menue.svg";
 import menueSvg2 from "../../assets/white-menue.svg";
-import MenueItemsList from "./menuItemsList/MenueItemsList";
+import MenueActionsList from "./menuActions/MenueActionsList";
+
+// Card is a component that renders a div that serves as the parent container for all the other card components.
+// Props:
+// all html attributes
 
 const Card = ({ children, classes, ...rest }) => {
   return (
@@ -31,6 +35,10 @@ const Card = ({ children, classes, ...rest }) => {
   );
 };
 
+// Card.Body is a component that renders a div serves as a container for all of the cards contents.
+// Props:
+// all html attributes
+
 Card.Body = ({ children, classes, ...rest }) => {
   return (
     <Body className={classNames("card-container", classes)} {...rest}>
@@ -38,6 +46,11 @@ Card.Body = ({ children, classes, ...rest }) => {
     </Body>
   );
 };
+
+// Card.Heading is a simple component that renders a header element to display the heading.
+// Props:
+// text - string
+// all html attributes
 
 Card.Heading = ({ classes, text, ...rest }) => {
   return (
@@ -49,6 +62,10 @@ Card.Heading = ({ classes, text, ...rest }) => {
   );
 };
 
+// Card.SubHeading is a simple component that renders a header element to display the sub-heading.
+// Props:
+// text - string
+// all html attributes
 Card.SubHeading = ({ text, classes, ...rest }) => {
   return (
     <SubHeading className={classNames("card-sub-heading", classes)} {...rest}>
@@ -56,6 +73,12 @@ Card.SubHeading = ({ text, classes, ...rest }) => {
     </SubHeading>
   );
 };
+
+// Card.Media is a simple component that has the ability to render all image types including SVG and video.
+// Props:
+// isVideo - Boolean default value false
+// src - String
+// all html attributes
 
 Card.Media = ({
   alt = "media-content",
@@ -75,6 +98,10 @@ Card.Media = ({
   );
 };
 
+// Card.Text is a simlple component that renders a p tag to display text.
+// / Props:
+// text - string
+// all html attributes
 Card.Text = ({ classes, text, ...rest }) => {
   return (
     <CardText className={classNames("card-text", classes)} {...rest}>
@@ -82,6 +109,10 @@ Card.Text = ({ classes, text, ...rest }) => {
     </CardText>
   );
 };
+
+// Card.Footer is a simple component that renders a footer tag that which serves as a container for the Card.FovoriteButton and the Card.Menue.
+// Props:
+// all html attributes
 
 Card.Footer = ({ children, classes, ...rest }) => {
   return (
@@ -91,7 +122,12 @@ Card.Footer = ({ children, classes, ...rest }) => {
   );
 };
 
-Card.FavoriteButton = ({ classes, isActive, src, ...rest }) => {
+// Card.FavoriteButton is a simple component that renders a button that can be toggled between active and inactive.
+// Props:
+// isActive - boolean defaults to false
+// all html attributes
+
+Card.FavoriteButton = ({ classes, isActive = false, src, ...rest }) => {
   return (
     <CardFavoriteButton
       className={classNames("favorite-button", classes)}
@@ -102,11 +138,17 @@ Card.FavoriteButton = ({ classes, isActive, src, ...rest }) => {
   );
 };
 
+// Card.Menue is a simple component that renders a menue button that can be toogled between opened and closed. When open the menue will display the menue actions which is passed through via the menueActions props.
+// Props:
+// isOpen - boolean
+// menueActions
+// all html attributes
+
 Card.Menue = ({
   classes,
   isOpen = false,
-  menueItems,
-  menueItemClick,
+  menueActions,
+  menueActionClick,
   ...rest
 }) => {
   return (
@@ -125,9 +167,12 @@ Card.Menue = ({
             <img alt="menue-button" src={isOpen ? menueSvg2 : menueSvg} />
           </MenueImgContainer>
         </MenueButton>
-        <MenuItemsContainer style={{ display: !isOpen && "none" }}>
-          <MenueItemsList items={menueItems} onClick={menueItemClick} />
-        </MenuItemsContainer>
+        <MenuActionsContainer style={{ display: !isOpen && "none" }}>
+          <MenueActionsList
+            actions={menueActions}
+            menueActionClick={menueActionClick}
+          />
+        </MenuActionsContainer>
       </MenueContainer>
     </>
   );
