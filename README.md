@@ -1,6 +1,6 @@
 # Getting Started with Card Component
 
-# [Example](https://cardjs-test.netlify.app)
+# [Example Site](https://cardjs-test.netlify.app)
 
 Created with Styled Components
 
