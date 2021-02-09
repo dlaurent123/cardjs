@@ -76,7 +76,8 @@ all html attributes.
 
 **Props:**
 
-`isActive` = boolean defaults to false.
+`isActive` = boolean defaults to false
+
 all html attributes.
 
 ### `Card.Menue`
@@ -86,5 +87,6 @@ all html attributes.
 **Props:**
 
 `isOpen` = boolean defaults to false.
-`menueActions` = array of obejects with name and clickHandler keys.
+`menueActions` = array of obejects with name and clickHandler keys
+
 all html attributes.
