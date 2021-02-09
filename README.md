@@ -18,7 +18,7 @@ A card is a flexible and extensible content container. It includes a wide variet
 
 all html attributes
 
-### `Card.Boby`
+### `Card.Body`
 
 `Card.Body` is a component that renders a div that serves as a container for all of the cards contents.
 
