@@ -7,6 +7,10 @@ function App() {
   const [isActive, setIsActive] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  const test = ({ action }) => {
+    console.log(action.name);
+  };
+
   return (
     <div className="App">
       <Card>
@@ -30,8 +34,11 @@ function App() {
             <Card.Menue
               isOpen={isOpen}
               onClick={() => setIsOpen(!isOpen)}
-              menueActions={["Save", "Edit", "Preview"]}
-              menueActionClick={() => console.log("hello")}
+              menueActions={[
+                { name: "Save", clickHandler: test },
+                { name: "Edit", clickHandler: test },
+                { name: "Preview", clickHandler: test },
+              ]}
             />
           </Card.Footer>
         </Card.Body>

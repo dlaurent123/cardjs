@@ -146,19 +146,18 @@ Card.FavoriteButton = ({ classes, isActive = false, src, ...rest }) => {
   );
 };
 
-// Card.Menue is a simple component that renders a menue button that can be toogled between opened and closed. When open the menue will display the menue actions which is passed through via the menueActions props.
+// Card.Menue is a simple component that renders a menue button that can be toogled between opened and closed. When open the menue will display the menue actions which is passed through via the menueActions prop.
 
 // Props:
 // isOpen = boolean defaults to false
-// menueActions = array with string values
-// menueActionClick = takes in a function that serves as the click handler for each menue action.
+// menueActions = array of obejects with name and clickHandler keys
 // all html attributes
 
 Card.Menue = ({
   classes,
   isOpen = false,
   menueActions,
-  menueActionClick,
+
   ...rest
 }) => {
   return (
@@ -178,10 +177,7 @@ Card.Menue = ({
           </MenueImgContainer>
         </MenueButton>
         <MenuActionsContainer style={{ display: !isOpen && "none" }}>
-          <MenueActionsList
-            actions={menueActions}
-            menueActionClick={menueActionClick}
-          />
+          <MenueActionsList actions={menueActions} />
         </MenuActionsContainer>
       </MenueContainer>
     </>
