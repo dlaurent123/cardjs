@@ -24,6 +24,7 @@ import menueSvg2 from "../../assets/white-menue.svg";
 import MenueActionsList from "./menuActions/MenueActionsList";
 
 // Card is a component that renders a div that serves as the parent container for all the other card components.
+
 // Props:
 // all html attributes
 
@@ -36,6 +37,7 @@ const Card = ({ children, classes, ...rest }) => {
 };
 
 // Card.Body is a component that renders a div serves as a container for all of the cards contents.
+
 // Props:
 // all html attributes
 
@@ -49,7 +51,8 @@ Card.Body = ({ children, classes, ...rest }) => {
 
 // Card.Heading is a simple component that renders a header element to display the heading.
 // Props:
-// text - string
+
+// text = string
 // all html attributes
 
 Card.Heading = ({ classes, text, ...rest }) => {
@@ -64,7 +67,8 @@ Card.Heading = ({ classes, text, ...rest }) => {
 
 // Card.SubHeading is a simple component that renders a header element to display the sub-heading.
 // Props:
-// text - string
+
+// text = string
 // all html attributes
 Card.SubHeading = ({ text, classes, ...rest }) => {
   return (
@@ -76,8 +80,9 @@ Card.SubHeading = ({ text, classes, ...rest }) => {
 
 // Card.Media is a simple component that has the ability to render all image types including SVG and video.
 // Props:
-// isVideo - Boolean default value false
-// src - String
+
+// isVideo = Boolean default value false
+// src = String
 // all html attributes
 
 Card.Media = ({
@@ -100,7 +105,8 @@ Card.Media = ({
 
 // Card.Text is a simlple component that renders a p tag to display text.
 // / Props:
-// text - string
+
+// text = string
 // all html attributes
 Card.Text = ({ classes, text, ...rest }) => {
   return (
@@ -111,6 +117,7 @@ Card.Text = ({ classes, text, ...rest }) => {
 };
 
 // Card.Footer is a simple component that renders a footer tag that which serves as a container for the Card.FovoriteButton and the Card.Menue.
+
 // Props:
 // all html attributes
 
@@ -123,8 +130,9 @@ Card.Footer = ({ children, classes, ...rest }) => {
 };
 
 // Card.FavoriteButton is a simple component that renders a button that can be toggled between active and inactive.
+
 // Props:
-// isActive - boolean defaults to false
+// isActive = boolean defaults to false
 // all html attributes
 
 Card.FavoriteButton = ({ classes, isActive = false, src, ...rest }) => {
@@ -139,9 +147,11 @@ Card.FavoriteButton = ({ classes, isActive = false, src, ...rest }) => {
 };
 
 // Card.Menue is a simple component that renders a menue button that can be toogled between opened and closed. When open the menue will display the menue actions which is passed through via the menueActions props.
+
 // Props:
-// isOpen - boolean
-// menueActions
+// isOpen = boolean defaults to false
+// menueActions = array with string values
+// menueActionClick = takes in a function that serves as the click handler for each menue action.
 // all html attributes
 
 Card.Menue = ({
