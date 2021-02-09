@@ -16,7 +16,7 @@ A card is a flexible and extensible content container. It includes a wide variet
 
 **Props:**
 
-all html attributes
+All html attributes
 
 ### `Card.Body`
 
@@ -24,7 +24,7 @@ all html attributes
 
 **Props:**
 
-all html attributes.
+All html attributes.
 
 ### `Card.Heading`
 
@@ -32,8 +32,8 @@ all html attributes.
 
 **Props:**
 
-`text` = string.
-all html attributes.
+`text` = `String`
+All html attributes.
 
 ### `Card.SubHeading`
 
@@ -41,8 +41,8 @@ all html attributes.
 
 **Props:**
 
-`text` = String.
-all html attributes.
+`text` = `String`
+All html attributes.
 
 ### `Card.Media`
 
@@ -50,9 +50,9 @@ all html attributes.
 
 **Props:**
 
-`isVideo` = Boolean default value false.
-`src` = String.
-all html attributes.
+`isVideo` = `Boolean` default value `false`
+`src` = `String`
+All html attributes
 
 ### `Card.Text`
 
@@ -60,15 +60,15 @@ all html attributes.
 
 **Props:**
 
-`text` = String.
-all html attributes.
+`text` = `String`
+All html attributes.
 
 ### `Card.Footer`
 
 `Card.Footer` is a simple component that renders a footer tag that which serves as a container for the Card.FovoriteButton and the Card.Menue.
 
 **Props:**
-all html attributes.
+All html attributes.
 
 ### `Card.FavoriteButton`
 
@@ -76,9 +76,8 @@ all html attributes.
 
 **Props:**
 
-`isActive` = boolean defaults to false
-
-all html attributes.
+`isActive` = boolean defaults to `false`
+All html attributes.
 
 ### `Card.Menue`
 
@@ -86,7 +85,6 @@ all html attributes.
 
 **Props:**
 
-`isOpen` = boolean defaults to false.
-`menueActions` = array of obejects with name and clickHandler keys
-
-all html attributes.
+`isOpen` = `boolean` defaults to `false`
+`menueActions` = array of obejects with `name` and `clickHandler` keys
+All html attributes.
