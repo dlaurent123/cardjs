@@ -10,23 +10,23 @@ function App() {
   return (
     <div className="App">
       <Card>
-        <Card.Media controls src={video} />
+        {/* <Card.Media controls src={video} /> */}
         <Card.Body>
           <Card.Heading
             className="truncate"
             text={"Important Announcement - Pass the test"}
           />
           <Card.SubHeading text={"Last edited 4 hours ago"} />
-          <Card.Text
+          {/* <Card.Text
             text={
               "A card is a flexible and extensible content container. It includes a wide variety of content, thumbnails, video, images, subheadings, actions, and content."
             }
-          />
+          /> */}
           <Card.Footer>
-            {/* <Card.FavoriteButton
+            <Card.FavoriteButton
               onClick={() => setIsActive(!isActive)}
               isActive={isActive}
-            /> */}
+            />
             <Card.Menue
               isOpen={isOpen}
               onClick={() => setIsOpen(!isOpen)}

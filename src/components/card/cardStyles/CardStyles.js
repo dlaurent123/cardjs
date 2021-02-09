@@ -6,6 +6,7 @@ export const Body = styled.div`
   min-height: 15vh;
   flex-direction: column;
   padding: 20px;
+  padding-bottom: 15px;
 `;
 
 export const CardContainer = styled.div`
@@ -17,7 +18,6 @@ export const CardContainer = styled.div`
   border-style: solid;
   min-width: 25vw;
   min-height: 15vh;
-
   justify-content: center;
   width: 25vw;
 `;
@@ -29,6 +29,10 @@ export const Heading = styled.h1`
   color: #2a2941;
   margin-bottom: 10px;
   text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 `;
 
 export const SubHeading = styled.h2`
@@ -71,18 +75,17 @@ export const CardText = styled.p`
 
 export const CardFooter = styled.div`
   display: flex;
-  /* min-height: 10vh;
-  min-width: 22vw; */
   width: inherit;
   justify-content: space-between;
   align-items: center;
-  height: 5vh;
+  height: 7vh;
 `;
 
 export const CardFavoriteButton = styled.div`
   display: flex;
   height: 20px;
   width: 20px;
+  flex-grow: 1;
 `;
 
 export const MenueButton = styled.div`
