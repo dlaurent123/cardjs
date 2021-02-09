@@ -10,6 +10,8 @@ A card is a flexible and extensible content container. It includes a wide variet
 
 # Card Api
 
+##
+
 ### `Card`
 
 `Card` is a component that renders a div that serves as the top level component for the Card module.
@@ -18,6 +20,8 @@ A card is a flexible and extensible content container. It includes a wide variet
 
 - All html attributes
 
+##
+
 ### `Card.Body`
 
 `Card.Body` is a component that renders a div that serves as a container for all of the cards contents.
@@ -25,6 +29,8 @@ A card is a flexible and extensible content container. It includes a wide variet
 **Props:**
 
 - All html attributes.
+
+##
 
 ### `Card.Heading`
 
@@ -35,6 +41,8 @@ A card is a flexible and extensible content container. It includes a wide variet
 - `text` = `String`
 - All html attributes.
 
+##
+
 ### `Card.SubHeading`
 
 `Card.SubHeading` is a simple component that renders a header element to display the sub-heading.
@@ -43,6 +51,8 @@ A card is a flexible and extensible content container. It includes a wide variet
 
 - `text` = `String`
 - All html attributes.
+
+##
 
 ### `Card.Media`
 
@@ -54,6 +64,8 @@ A card is a flexible and extensible content container. It includes a wide variet
 - `src` = `String`
 - All html attributes
 
+##
+
 ### `Card.Text`
 
 `Card.Text` is a simlple component that renders a p tag to display text.
@@ -63,6 +75,8 @@ A card is a flexible and extensible content container. It includes a wide variet
 - `text` = `String`
 - All html attributes.
 
+##
+
 ### `Card.Footer`
 
 `Card.Footer` is a simple component that renders a footer tag that which serves as a container for the Card.FovoriteButton and the Card.Menue.
@@ -71,14 +85,18 @@ A card is a flexible and extensible content container. It includes a wide variet
 
 - All html attributes.
 
+##
+
 ### `Card.FavoriteButton`
 
 `Card.FavoriteButton` is a simple component that renders a button that can be toggled between active and inactive.
 
 **Props:**
 
-- `isActive` = boolean defaults to `false`
+- `isActive` = `boolean` defaults to `false`
 - All html attributes.
+
+##
 
 ### `Card.Menue`
 
