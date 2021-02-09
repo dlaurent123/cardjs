@@ -1,6 +1,6 @@
 # Getting Started with Card Component
 
-# [Example](https://facebook.github.io/create-react-app/docs/deployment)
+# [Example](https://cardjs-test.netlify.app)
 
 Created with Styled Components
 
