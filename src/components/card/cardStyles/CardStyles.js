@@ -6,7 +6,7 @@ export const Body = styled.div`
   min-height: 15vh;
   flex-direction: column;
   padding: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 `;
 
 export const CardContainer = styled.div`
@@ -16,10 +16,10 @@ export const CardContainer = styled.div`
   border-width: 1px;
   border-radius: 5px;
   border-style: solid;
-  min-width: 25vw;
+  min-width: 250px;
   min-height: 15vh;
   justify-content: center;
-  width: 25vw;
+  width: 20vw;
 `;
 
 export const Heading = styled.h1`
@@ -48,6 +48,7 @@ export const SubHeading = styled.h2`
 export const CardMediaContainer = styled.div`
   width: inherit;
   height: 25vh;
+  min-width: inherit;
 `;
 
 export const CardImage = styled.img`
@@ -86,6 +87,7 @@ export const CardFavoriteButton = styled.div`
   height: 20px;
   width: 20px;
   flex-grow: 1;
+  cursor: pointer;
 `;
 
 export const MenueButton = styled.div`
@@ -93,12 +95,14 @@ export const MenueButton = styled.div`
   flex-direction: column;
   border-color: #d2d7df;
   border-width: 1px;
-  border-radius: 5px;
+  border-radius: 3px;
   border-style: solid;
   justify-content: center;
   align-items: center;
-  height: 35px;
-  width: 2.5vw;
+  height: 5vh;
+  width: 3vw;
+  min-width: 35px;
+  cursor: pointer;
 `;
 
 export const MenueImgContainer = styled.div`
@@ -119,6 +123,7 @@ export const MenuActionsContainer = styled.div`
   border-style: solid;
   margin-top: 5px;
   bottom: -105px;
+  min-width: 100px;
 `;
 
 export const MenueAction = styled.p`

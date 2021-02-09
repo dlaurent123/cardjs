@@ -23,7 +23,7 @@ import menueSvg from "../../assets/menue.svg";
 import menueSvg2 from "../../assets/white-menue.svg";
 import MenueActionsList from "./menuActions/MenueActionsList";
 
-// Card is a component that renders a div that serves as the parent container for all the other card components.
+// Card is a component that renders a div that serves as the top level component for the card module.
 
 // Props:
 // all html attributes
@@ -36,7 +36,7 @@ const Card = ({ children, classes, ...rest }) => {
   );
 };
 
-// Card.Body is a component that renders a div serves as a container for all of the cards contents.
+// Card.Body is a component that renders a div that serves as a container for all of the cards contents.
 
 // Props:
 // all html attributes
@@ -50,8 +50,8 @@ Card.Body = ({ children, classes, ...rest }) => {
 };
 
 // Card.Heading is a simple component that renders a header element to display the heading.
-// Props:
 
+// Props:
 // text = string
 // all html attributes
 
@@ -66,8 +66,8 @@ Card.Heading = ({ classes, text, ...rest }) => {
 };
 
 // Card.SubHeading is a simple component that renders a header element to display the sub-heading.
-// Props:
 
+// Props:
 // text = string
 // all html attributes
 Card.SubHeading = ({ text, classes, ...rest }) => {
@@ -79,8 +79,8 @@ Card.SubHeading = ({ text, classes, ...rest }) => {
 };
 
 // Card.Media is a simple component that has the ability to render all image types including SVG and video.
-// Props:
 
+// Props:
 // isVideo = Boolean default value false
 // src = String
 // all html attributes
@@ -104,15 +104,17 @@ Card.Media = ({
 };
 
 // Card.Text is a simlple component that renders a p tag to display text.
-// / Props:
 
+// Props:
 // text = string
 // all html attributes
 Card.Text = ({ classes, text, ...rest }) => {
   return (
-    <CardText className={classNames("card-text", classes)} {...rest}>
-      {text}
-    </CardText>
+    <div style={{ overflow: "scroll" }}>
+      <CardText className={classNames("card-text", classes)} {...rest}>
+        {text}
+      </CardText>
+    </div>
   );
 };
 
@@ -141,7 +143,11 @@ Card.FavoriteButton = ({ classes, isActive = false, src, ...rest }) => {
       className={classNames("favorite-button", classes)}
       {...rest}
     >
-      <img alt="favorite-button" src={isActive ? star2 : star1} />
+      <img
+        style={{ minWidth: "2vw" }}
+        alt="favorite-button"
+        src={isActive ? star2 : star1}
+      />
     </CardFavoriteButton>
   );
 };

@@ -1,49 +1,43 @@
 import "./App.css";
-import React, { useState } from "react";
-import { Card } from "./components/card/Card";
-import video from "./assets/image.svg";
+import React from "react";
+import Example1 from "./features/Example1";
+import Example2 from "./features/Example2";
+import Example3 from "./features/Example3";
+import Example4 from "./features/Example4";
+import Example5 from "./features/Example5";
 
 function App() {
-  const [isActive, setIsActive] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-
-  const test = ({ action }) => {
-    console.log(action.name);
-  };
-
   return (
-    <div className="App">
-      <Card>
-        {/* <Card.Media controls src={video} /> */}
-        <Card.Body>
-          <Card.Heading
-            className="truncate"
-            text={"Important Announcement - Pass the test"}
-          />
-          <Card.SubHeading text={"Last edited 4 hours ago"} />
-          {/* <Card.Text
-            text={
-              "A card is a flexible and extensible content container. It includes a wide variety of content, thumbnails, video, images, subheadings, actions, and content."
-            }
-          /> */}
-          <Card.Footer>
-            <Card.FavoriteButton
-              onClick={() => setIsActive(!isActive)}
-              isActive={isActive}
-            />
-            <Card.Menue
-              isOpen={isOpen}
-              onClick={() => setIsOpen(!isOpen)}
-              menueActions={[
-                { name: "Save", clickHandler: test },
-                { name: "Edit", clickHandler: test },
-                { name: "Preview", clickHandler: test },
-              ]}
-            />
-          </Card.Footer>
-        </Card.Body>
-      </Card>
-    </div>
+    <>
+      <h1
+        style={{
+          fontFamily: "Helvetica Neue",
+          fontSize: "50px",
+          position: "sticky",
+        }}
+      >
+        Card component UI exercise
+      </h1>
+      <div className="App">
+        <div className="flex-template rightDiv">
+          <Example3 />
+          <Example5 />
+        </div>
+        <div className="flex-template midDiv">
+          <a
+            style={{ fontSize: "25px" }}
+            href={"https://github.com/dlaurent123/cardjs"}
+          >
+            Git Hub
+          </a>
+          <Example2 />
+        </div>
+        <div className="flex-template leftDiv">
+          <Example4 />
+          <Example1 />
+        </div>
+      </div>
+    </>
   );
 }
 

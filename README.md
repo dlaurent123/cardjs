@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Getting Started with Card Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# [Example](https://facebook.github.io/create-react-app/docs/deployment)
 
-## Available Scripts
+Created with Styled Components
 
-In the project directory, you can run:
+import {Card} from "src/components/card/Card.js"
 
-### `npm start`
+A card is a flexible and extensible content container. It includes a wide variety of content, thumbnails, video, images, subheadings, actions, and content.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Card Api
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `Card`
 
-### `npm test`
+`Card` is a component that renders a div that serves as the top level component for the Card module.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Props:**
 
-### `npm run build`
+all html attributes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Card.Boby`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`Card.Body` is a component that renders a div that serves as a container for all of the cards contents.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Props:**
 
-### `npm run eject`
+all html attributes.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `Card.Heading`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`Card.Heading` is a simple component that renders a header element to display the heading.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Props:**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`text` = string.
+all html attributes.
 
-## Learn More
+### `Card.SubHeading`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`Card.SubHeading` is a simple component that renders a header element to display the sub-heading.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Props:**
 
-### Code Splitting
+`text` = String.
+all html attributes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `Card.Media`
 
-### Analyzing the Bundle Size
+`Card.Media` is a simple component that has the ability to render all image types including SVG and video.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Props:**
 
-### Making a Progressive Web App
+`isVideo` = Boolean default value false.
+`src` = String.
+all html attributes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### `Card.Text`
 
-### Advanced Configuration
+`Card.Text` is a simlple component that renders a p tag to display text.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Props:**
 
-### Deployment
+`text` = String.
+all html attributes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### `Card.Footer`
 
-### `npm run build` fails to minify
+`Card.Footer` is a simple component that renders a footer tag that which serves as a container for the Card.FovoriteButton and the Card.Menue.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Props:**
+all html attributes.
+
+### `Card.FavoriteButton`
+
+`Card.FavoriteButton` is a simple component that renders a button that can be toggled between active and inactive.
+
+**Props:**
+
+`isActive` = boolean defaults to false.
+all html attributes.
+
+### `Card.Menue`
+
+`Card.Menue` is a simple component that renders a menue button that can be toogled between opened and closed. When open the menue will display the menue actions which is passed through via the menueActions prop.
+
+**Props:**
+
+`isOpen` = boolean defaults to false.
+`menueActions` = array of obejects with name and clickHandler keys.
+all html attributes.
